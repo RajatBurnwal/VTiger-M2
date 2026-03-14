@@ -1,0 +1,38 @@
+package practice;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.EncryptedDocumentException;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+
+import genericUtility.ExcelUtility;
+
+public class FetchingDataFromExcelFile {
+
+	public static void main(String[] args) throws EncryptedDocumentException, IOException {
+		
+//		FileInputStream fis = new FileInputStream("C:\\Users\\rajat burnwal\\Desktop\\Data.xlsx");
+//		Workbook wb = WorkbookFactory.create(fis);
+//		Sheet sh = wb.getSheet("Cars");
+//		Row r = sh.getRow(6);
+//		Cell c = r.getCell(2);
+////		String value = c.getStringCellValue();
+////		double value = c.getNumericCellValue();
+//		DataFormatter df = new DataFormatter();
+//		String value = df.formatCellValue(c);
+//		System.out.println(value);
+		ExcelUtility eUtil = new ExcelUtility();
+		String value1 = eUtil.getSingleCellDataFromExcel("Cars", 2, 1);
+		System.out.println(value1);
+		String value2 = eUtil.getSingleCellDataFromExcel("Actors", 6, 2);
+		System.out.println(value2);
+
+	}
+
+}
