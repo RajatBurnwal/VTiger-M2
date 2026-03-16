@@ -32,10 +32,10 @@ public class BaseClass {
 		System.out.println("Create DB connection");
 	}
 	
-//	@Parameters("browser")
+	@Parameters("browser")
 	@BeforeClass(alwaysRun = true)
-	public void bcConfig(/*@Optional("chrome") String BROWSER*/) throws IOException {
-		String BROWSER = System.getProperty("browser");
+	public void bcConfig(@Optional("chrome") String BROWSER) throws IOException {
+//		String BROWSER = System.getProperty("browser");
 		if(BROWSER.equals("chrome"))
 			driver = new ChromeDriver();
 		else if(BROWSER.equals("edge")) {
