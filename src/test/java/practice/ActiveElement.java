@@ -15,6 +15,7 @@ public class ActiveElement {
 //		act.sendKeys("hello").perform();
 		driver.switchTo().activeElement().sendKeys("robin");
 
+		
 	}
 
 }
