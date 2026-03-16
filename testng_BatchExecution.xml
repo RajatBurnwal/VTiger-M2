@@ -8,7 +8,7 @@
     <classes>
       <class name="testCaseRepo.TC_003"/>
       <class name="testCaseRepo.TC_001"/>
-      <class name="testCaseRepo.TC_004"/>
+      <class name="testCaseRepo.TC_004Test"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
